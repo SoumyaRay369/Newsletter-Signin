@@ -1,0 +1,1 @@
+This is the second attempt at making a Login/ Signup website and deploy it on Vercel, both frontend and backend. Let's see how this goes. Of course, now that I have become an experienced devleoper I will be able to make the frontend in React.js and the backend will be in Express.js and the database used will be MongoDB.
