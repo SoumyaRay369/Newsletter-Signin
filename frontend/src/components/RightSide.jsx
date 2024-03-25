@@ -14,7 +14,7 @@ export const RightSide = ({page}) => {
             return;
         }
 
-        const response = await fetch('https://newsletter-signin.onrender.com//signup', {
+        const response = await fetch('https://newsletter-signin.onrender.com/signup', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -31,7 +31,7 @@ export const RightSide = ({page}) => {
     const handleLogin = async (event) => {
         event.preventDefault();
 
-        const response = await fetch('https://newsletter-signin.onrender.com//login', {
+        const response = await fetch('https://newsletter-signin.onrender.com/login', {
             method: 'POST', 
             headers: {
                 'Content-Type' : 'application/json'
