@@ -5,13 +5,13 @@ app.use(express.json())
 const cors = require('cors')
 app.use(cors())
 
-app.post('/signup', (req, res) => {
+app.post('/signup', async(req, res) => {
     const {userId, password} = req.body;
     const user = new User({
         userId: userId,
         password: password
     })
-    user.save();
+    await user.save();
     res.status(200).json({msg:"Succesfully signed up!!!"})
 })
 
@@ -35,6 +35,10 @@ app.get("/", (req, res) =>  {
     res.json({msg: "Hi there!!!"})
 })
 
+app.get('/users', async(req, res) => {
+    const users = await User.find({})
+    res.json(users);
+})
 app.listen(3000, () => {
     console.log("Listening on port 3000")
 })

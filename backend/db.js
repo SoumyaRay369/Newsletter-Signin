@@ -6,7 +6,7 @@ const User = new mongoose.model('users', {
     userId: String, 
     password: String
 })
-
+console.log(process.env.MONGO_URI)
 
 
 module.exports = User;
