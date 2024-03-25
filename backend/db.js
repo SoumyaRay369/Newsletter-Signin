@@ -1,5 +1,6 @@
+require('dotenv').config();
 const mongoose = require('mongoose')
-mongoose.connect("mongodb+srv://soumyaray2472:soumyaray2472@cluster0.otvx3fa.mongodb.net/newsletter_signin")
+mongoose.connect(process.env.MONGO_URI)
 
 const User = new mongoose.model('users', {
     userId: String, 
